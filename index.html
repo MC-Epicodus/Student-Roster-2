@@ -1,30 +1,38 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link href="css/styles.css" rel="stylesheet" type="text/css">
-        <script src="js/jquery-1.11.3.js"></script>
-        <script src="js/scripts.js"></script>
-        <title>Roman Numerals</title>
-    </head>
-    <body>
+<!doctype html>
+<html ng-app="studentRoster">
 
-        <div class="container">
-            <h1>Roman Numerals</h1>
+<head>
+    <title>Student App</title>
+    <script src="lib/angular.js"></script>
+    <script src ="app.js"></script>
+    <script src="js/StudentsController.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
 
-            <form id="romanNumeral">
-                <div class="form-group">
-                    <label for="regNumber">Enter number to convert:</label>
-                    <input id="regNumber" type="text">
-                    <br>
-                </div>
-
-                <button type="submit" class="btn">Find out!</button>
-            </form>
-
-            <div id="result">
-                <p> <span class="result"></span></p>
+<body>
+    <div class="container" ng-controller="StudentsCtrl">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Student List</h2>
+                <ul>
+                    <li ng-repeat="item in students">
+                        {{item.name}}
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2>New Student</h2>
+                <form ng-submit="addStudent()" class="form-inline" role="form">
+                    <div class="form-group">
+                        <input type="text" ng-model="studentName" class="form-control" placeholder="Enter name">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
             </div>
         </div>
+    </div>
+</body>
 
-    </body>
 </html>
