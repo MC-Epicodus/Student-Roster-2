@@ -1,8 +1,8 @@
 # _Student Roster_
 
-##### _Student Roster App 9/21/2015_
+##### _Student Roster App 9/22/2015_
 
-#### By Brian Borealis and Annie Hoogendoorn
+#### By Brian Borealis and Mike Chastain
 
 ## Description
 
@@ -20,7 +20,7 @@ Angular, Javascript, jQuery, HTML, CSS Bootstrap._
 
 ### Legal
 
-Copyright (c) 2015 Brian Borealis & Annie Hoogendoorn
+Copyright (c) 2015 Brian Borealis & Mike Chastain
 
 This software is licensed under the MIT license.
 
