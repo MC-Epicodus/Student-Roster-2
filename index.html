@@ -5,14 +5,15 @@
     <title>Student App</title>
     <script src="lib/angular.js"></script>
     <script src ="app.js"></script>
-    <script src="js/StudentsController.js"></script>
-    <script src="js/jquery-1.11.3.js"></script>
+    <script src="controller/StudentsController.js"></script>
+    <script src="controller/jquery-1.11.3.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <div class="container" ng-controller="StudentsCtrl">
+    <div class="container">
+      <div ng-controller="StudentsCtrl">
         <div class="row" ng-show="students.length">
             <div class="col-md-12">
                 <h4>Search Students</h4>
@@ -54,6 +55,19 @@
                 </form>
             </div>
         </div>
+      </div>
+  <!-- end studentcontrol #########################-->
+  <!-- permission controls ########################-->
+        <div class="row permission" ng-controller="FieldTripsCtrl">
+          <div class ="col-md-6">
+          <h2>Permission Slips </h2>
+          <ul>
+            <li ng-repeat="item in studentsWithPermission">
+              {{item.name}}
+            </li>
+          </div>
+          </ul>
+      </div>
     </div>
 </body>
 
